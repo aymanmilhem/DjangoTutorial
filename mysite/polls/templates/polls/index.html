@@ -2,8 +2,20 @@
     <ul>
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+=======
+<h1>Question/Poll list</h1>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">Question: {{ 
+question.question_text }}</a></li>
+>>>>>>> 010bdff1dae236696ac9f2ee89cc4df822545844
     {% endfor %}
     </ul>
 {% else %}
     <p>No polls are available.</p>
+<<<<<<< HEAD
 {% endif %}
+=======
+{% endif %}
+>>>>>>> 010bdff1dae236696ac9f2ee89cc4df822545844
